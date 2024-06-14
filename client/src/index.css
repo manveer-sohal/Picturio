@@ -1,0 +1,436 @@
+body {
+  background-color: rgb(63, 63, 63);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#log-out {
+  background-color: #007bff;
+  float: right;
+}
+#log-out:hover {
+  background-color: red;
+}
+.buttons {
+  background-color: rgb(43, 41, 41);
+  list-style: circle;
+  padding: 2.1vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  z-index: 3;
+  min-width: 600px;
+}
+
+ul li {
+  display: inline-block;
+  list-style: circle;
+}
+
+a {
+  display: inline-block; /* Ensures elements are displayed inline */
+  padding: 10px 20px; /* Adjust padding for better proportion */
+  margin: 5px; /* Add margin for spacing between elements */
+  border: 1px solid #bbb;
+  border-radius: 4px; /* Add rounded corners */
+  background-color: rgb(207, 182, 149);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  /*transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+a:hover {
+  background-color: rgb(154, 142, 126); /* Change background color on hover */
+  color: white; /* Ensure text color remains white on hover */
+}
+
+#signUp,
+#logIn,
+#verify {
+  min-width: 700px;
+}
+
+#Container {
+  padding: 10px 40px 10px 10px;
+  overflow: hidden;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #ccc; /* Adjusted border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Updated box shadow */
+  border-radius: 5px;
+  width: 70%;
+  max-width: 550px;
+  min-width: 100px;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0px 22px 0x;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button {
+  background-color: rgb(184, 176, 176);
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 10px 2px 2px 2px;
+}
+button:hover {
+  background-color: rgb(204, 196, 196);
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 10px 2px 2px 2px;
+}
+
+#text p {
+  float: left;
+}
+.re-direct {
+  color: purple;
+}
+.re-direct:hover {
+  color: rgb(175, 0, 175);
+}
+
+.image-submit {
+  border-radius: 4px; /* Add rounded corners */
+  flex-direction: row;
+  background-color: rgb(206, 217, 226);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23pc;
+  height: 30.8pc;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#heart {
+  size: 100px;
+}
+
+.container-post {
+  z-index: 4;
+  position: fixed;
+  background-color: #55555535;
+  right: 1px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: left;
+  padding-bottom: 30px;
+}
+#post {
+  z-index: 11;
+  background-color: black;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+  display: block;
+  position: fixed;
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Move it back by half its own size */
+  top: 50%;
+}
+
+#post-image {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  border-top-left-radius: 10px; /* Rounded top-left corner */
+  border-top-right-radius: 10px; /* Rounded top-right corner */
+  overflow: hidden; /* Hide overflowing content */
+  margin: 0 auto;
+  float: bottom;
+}
+#image {
+  position: absolute;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+#comment-section {
+  background-color: #fff;
+  border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.comment {
+  border-bottom: 1px solid #ddd; /* Add subtle border between comments */
+  padding: 10px 0; /* Adjust padding for comments */
+}
+
+.like-button {
+  width: 25px;
+}
+.like-button:hover {
+  width: 26px;
+}
+#back-button,
+#front-button {
+  position: relative;
+  top: 50%;
+  background-color: white;
+  padding: 10px 20px; /* Increased padding */
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+  color: #000; /* Black color */
+  border: 2px solid #363434; /* Add a black border */
+  border-radius: 100px; /* Add some border radius for rounded corners */
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+#front-button {
+  float: right;
+  right: 15px;
+}
+#back-button {
+  left: 15px;
+}
+
+#back-button:hover {
+  color: gray; /* Red color on hover */
+  background-color: gray; /* Red border on hover */
+}
+.arrow {
+  position: static;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.flip-card img {
+  object-fit: cover; /* Scale the image as large as possible to cover the container */
+  transition-duration: 200ms;
+  height: 250px;
+}
+
+.cards {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Center items vertically */
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.cards > div {
+  background-color: red;
+  width: auto;
+  height: 250px;
+  margin: 5px; /* Add margin to create space between cards */
+  display: inline-flex; /* Change to inline-flex for better alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+.pics {
+  width: 100%; /* Ensure the image fills its container horizontally */
+  height: 100%; /* Ensure the image fills its container vertically */
+  object-fit: cover; /* Scale the image as large as possible to cover the container */
+}
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  /*transition: transform 1s;
+ */
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  object-fit: contain;
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgba(255, 255, 255, 0.532);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#imageContainer {
+  background-color: rgb(38, 178, 178);
+}
+
+h1 {
+  color: black;
+  font-size: 20px;
+}
+
+.comments {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+#input-file {
+  display: none;
+}
+
+#input-file-label,
+#submit-form,
+#add-pic,
+#go-back {
+  display: inline-block; /* Ensures elements are displayed inline */
+  padding: 10px 20px; /* Adjust padding for better proportion */
+  margin: 5px; /* Add margin for spacing between elements */
+  border: 1px solid #bbb;
+  border-radius: 4px; /* Add rounded corners */
+  background-color: rgb(207, 182, 149);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  /*transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+#go-back,
+#go-back-submit {
+  display: none; /* Ensures elements are displayed inline */
+  padding: 10px 20px; /* Adjust padding for better proportion */
+  margin: 5px; /* Add margin for spacing between elements */
+  border: 1px solid #bbb;
+  border-radius: 4px; /* Add rounded corners */
+  background-color: rgb(207, 182, 149);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  /*transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+#input-file-label:hover,
+#submit-form:hover,
+#add-pic:hover,
+#go-back:hover,
+#go-back-submit:hover {
+  background-color: rgb(154, 142, 126); /* Change background color on hover */
+  color: white; /* Ensure text color remains white on hover */
+}
+
+#go-back-submit {
+  position: relative;
+  left: 250px;
+  top: 330px;
+}
+#input-text {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #555;
+  outline: none; /* Remove default outline */
+}
+.instructions {
+  font-size: small;
+  margin: 0px;
+}
+.offscreen {
+  display: none;
+}
+
+.code-input {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px; /* Adjust as needed */
+}
+
+.code-input input[type="text"] {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Optional styling */
+.code-input input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.text {
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+}
+
+#verify-container {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+}

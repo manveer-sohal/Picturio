@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Main() {
   useEffect(() => {
-    //navigate("/LogIn");
+    navigate("/LogIn");
   }, []);
 
   const navigate = useNavigate();

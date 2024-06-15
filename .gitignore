@@ -1,2 +1,4 @@
-node_modules
+# Node.js
+node_modules/
 .DS_Store
+

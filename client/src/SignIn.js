@@ -51,7 +51,7 @@ function SignIn() {
         naviagte("/pic");
       }
     }
-  }, [code]);
+  }, [code, generatedCode, naviagte]);
 
   useEffect(() => {
     console.log("ge", generatedCode);
@@ -60,25 +60,27 @@ function SignIn() {
   useEffect(() => {
     const result = EMAIL_REGEX.test(user);
     setValidEmail(result);
-    console.log(validEmail);
   }, [user]);
 
+  function validPasswordSet() {
+    setValidLowerCase(LOWERCASE.test(password));
+    setValidUpperCase(UPPERCASE.test(password));
+    setValidNumber(NUMBER.test(password));
+    setValidCharacter(CHARACTER.test(password));
+    setValidLength(LENGTH.test(password));
+  }
   useEffect(() => {
     const result = PASSWORD_REGEX.test(password);
-    setValidPassword(result);
+    validPasswordSet(result);
     console.log(user);
 
     console.log("valid email", validEmail);
 
     if (!result) {
-      setValidLowerCase(LOWERCASE.test(password));
-      setValidUpperCase(UPPERCASE.test(password));
-      setValidNumber(NUMBER.test(password));
-      setValidCharacter(CHARACTER.test(password));
-      setValidLength(LENGTH.test(password));
+      setValidPassword();
     }
 
-    const match = password == matchPassword;
+    const match = password === matchPassword;
     setValidMatchPassword(match);
   }, [password, matchPassword]);
 
@@ -132,6 +134,7 @@ function SignIn() {
     }
   }
 
+  /*
   async function verifed() {
     const account = {
       username: user,
@@ -145,6 +148,7 @@ function SignIn() {
       body: JSON.stringify(account),
     });
   }
+  */
   const digits = document.querySelectorAll(".digit");
 
   ///**** incremntes or decrements the input code feild */
@@ -182,7 +186,7 @@ function SignIn() {
     <>
       <div
         id="verify"
-        style={{ display: visible == "verify" ? "block" : "none" }}
+        style={{ display: visible === "verify" ? "block" : "none" }}
       >
         <form className="modal-content" id="verify-form">
           <div id="verify-container">
@@ -226,7 +230,7 @@ function SignIn() {
 
       <div
         id="signUp"
-        style={{ display: visible == "signUp" ? "block" : "none" }}
+        style={{ display: visible === "signUp" ? "block" : "none" }}
       >
         <form
           className="modal-content"

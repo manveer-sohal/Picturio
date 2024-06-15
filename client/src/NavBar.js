@@ -1,4 +1,4 @@
-import { react, useContext } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
 function NavBar() {
@@ -12,10 +12,10 @@ function NavBar() {
         <a href="pics">Pics</a>
         <a href="countDown">Count Down</a>
         <a href="list">list</a>
-        <a id="log-out" onClick={() => logout()}>
+        <button id="log-out" onClick={() => logout()}>
           {" "}
           Log Out
-        </a>
+        </button>
       </ul>
     </>
   );

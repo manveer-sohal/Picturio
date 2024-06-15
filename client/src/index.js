@@ -7,7 +7,7 @@ import Main from "./Main";
 import LogIn from "./LogIn";
 import SignIn from "./SignIn";
 import Pic from "./Pic";
-import NavBar from "./NavBar";
+//import NavBar from "./NavBar";
 import Error_page from "./error_page";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

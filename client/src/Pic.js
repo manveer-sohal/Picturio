@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 import NavBar from "./NavBar";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 function Pics() {
   //change loading pics and uploading pics into componets, beaucse i removed removing the pics container
   //dyanmical added photos hav an alt issue
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [submitPicPage, setSubmitPicPage] = useState("hidden");
   const [pictureContainer, setPictureContainer] = useState(true);
@@ -16,8 +16,8 @@ function Pics() {
   const [inputText, setInputText] = useState("");
   const [file, setFile] = useState(null);
   const [likeButtonVisible, setLikeButtonVisible] = useState(false);
-  const [index, setIndex] = useState(0);
-  const [images, setImages] = useState({});
+  //const [index, setIndex] = useState(0);
+  //const [images, setImages] = useState({});
 
   const [imageCount, setImageCount] = useState(0);
 
@@ -45,7 +45,7 @@ function Pics() {
     setImageCount(data.url.length);
     if (data.url.length > 0) {
       for (var i = 0; i < data.url.length; i++) {
-        setImages({ src: data.url[i], alt: data.url[i] });
+        //setImages({ src: data.url[i], alt: data.url[i] });
         addPicture(i, data.url[i], data.text[i]);
       }
     }
@@ -85,9 +85,9 @@ function Pics() {
     const numImages = cardsChildren.length;
     // Adjust flex properties for the last row
 
-    const numCols = Math.floor(
-      cards.offsetWidth / cardsChildren[numImages - 1].offsetWidth
-    );
+    //const numCols = Math.floor(
+    //cards.offsetWidth / cardsChildren[numImages - 1].offsetWidth
+    //);
 
     let numImagesInLastRow = 0;
     let totalWidth = 0;
@@ -231,9 +231,9 @@ function Pics() {
     flipCard.appendChild(pic);
     cardsContainer.appendChild(flipCard);
     // Calculate height after image has loaded
-    pic.onload = function () {
-      var height = pic.clientWidth;
-    };
+    //pic.onload = function () {
+    //var height = pic.clientWidth;
+    //};
   }
 
   function showSubmitPage() {
@@ -281,7 +281,7 @@ function Pics() {
           }}
         >
           <div id="post-image">
-            <img id="image"></img>
+            <img id="image" alt="error"></img>
           </div>
           <div id="comment-section">
             <img

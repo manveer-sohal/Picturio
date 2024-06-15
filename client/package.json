@@ -50,5 +50,8 @@
     "@rollup/plugin-terser": "^0.4.4",
     "react-scripts": "^5.0.1",
     "workbox-background-sync": "^7.1.0"
+  },
+  "ci": {
+    "ignoreWarnings": true
   }
 }

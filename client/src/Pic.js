@@ -146,7 +146,7 @@ function Pics() {
   };
 
   function checkSubmission() {
-    //check if pic and text added not text twice
+    //check if picture and text added not text twice
     if (inputText !== "" && file !== null) {
       sendData(inputText, file);
     } else {
@@ -172,26 +172,6 @@ function Pics() {
     const data = await response.json();
     addPicture(24, data.url, data.text);
   }
-
-  /*
-    inputFile.addEventListener('change', async (event) => {
-        const file = inputFile.files[0];
-        const formData = new FormData();
-        formData.append('file', file);
-            
-        
-        const response = await fetch('/api',{
-            method: 'POST',
-            body: formData
-        });
-
-        const data = await response.json();
-        console.log(data);
-
-        console.log('File uploaded successfully:', response);
-        addPicture(24,data.url)
-    });
-*/
 
   function openPicture(i) {
     console.log("open picture", i);
@@ -243,7 +223,7 @@ function Pics() {
     */
     pic.loading = "lazy";
 
-    // Attach click event handler
+    // Attach click event handler to each picture
     pic.addEventListener("click", function () {
       openPicture(i);
     });
